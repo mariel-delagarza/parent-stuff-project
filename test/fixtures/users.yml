@@ -1,2 +1,6 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+#A fixture for testing user login.
 
+waffles:
+  name: Waffles Dog
+  email: waffles@dogmail.com
+  password_digest: <%= User.digest('password') %>
