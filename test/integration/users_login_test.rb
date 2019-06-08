@@ -4,6 +4,7 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
 
   def setup
     @user = users(:waffles)
+  end
 
   test "login with invalid information" do
     get login_path
