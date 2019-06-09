@@ -1,3 +1,15 @@
+<% if logged_in? %>
+  <div class="row">
+    <aside class="col-md-4">
+      <section class="user_info">
+        <%= render 'shared/user_info' %>
+      </section>
+      <section class="review_form">
+        <%= render 'shared/review_form' %>
+      </section>
+    </aside>
+  </div>
+<% else %>
 <div class="center jumbotron">
   <h1>Parent Stuff</h1>
   
