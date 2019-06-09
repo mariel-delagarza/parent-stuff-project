@@ -4,6 +4,7 @@ class ReviewsController < ApplicationController
 
   def create
     @review = current_user.reviews.build(review_params)
+    #@place_options = Places.all.map{ |p| [p.name, p.id] }
     if @review.save
       flash[:success] = "Review created!"
       redirect_to root_url
