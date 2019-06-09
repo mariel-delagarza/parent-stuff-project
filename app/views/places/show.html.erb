@@ -3,9 +3,7 @@
   <%= @place.name %>
 </h1>
 
-<div class="row">
 <ul>
-
   <li>Address:      <%= @place.address %></li>
   <br>
   <li>Website:      <%= @place.website %></li>
@@ -13,6 +11,8 @@
   <li>Phone Number: <%= @place.phone_number %></li>
   <br>
   <li>Category:     <%= @place.category %></li>
-
 </ul>
-</div>
+
+<h2>Have some of these details changed?</h2>
+<h2><%= link_to "Update them and share with other parents!", edit_place_path%></h2>
+
