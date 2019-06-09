@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_09_163049) do
+ActiveRecord::Schema.define(version: 2019_06_09_203338) do
+
+  create_table "features", force: :cascade do |t|
+    t.boolean "changing_tables"
+    t.boolean "family_bathroom"
+    t.boolean "high_chairs"
+    t.boolean "nursing_room"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "places", force: :cascade do |t|
     t.string "name"
