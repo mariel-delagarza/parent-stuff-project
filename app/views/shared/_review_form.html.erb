@@ -2,7 +2,6 @@
   <%= render 'shared/error_messages', object: f.object %>
   <div class="field">
     <%= f.text_area :content, placeholder: "Compose new review...." %>
-    <!-- <%= f.select(:place_id, @place_options) %> -->
   </div>
   <%= f.submit "Post", class: "btn btn-primary" %>
 <% end %>
