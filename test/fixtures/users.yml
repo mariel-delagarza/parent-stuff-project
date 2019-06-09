@@ -4,6 +4,7 @@ waffles:
   name: Waffles Dog
   email: waffles@dogmail.com
   password_digest: <%= User.digest('password') %>
+  admin: true
 
 biscuit: 
   name: Biscuit Boy
