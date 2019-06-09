@@ -15,7 +15,7 @@
     <%= f.text_field :phone_number, class: 'form-control' %>
 
     <%= f.label :category %>
-    <% f.select :category, [['Store','store'],['Restaurant','restaurant'],['Other','other']], class: 'form-control' %>
+    <%= f.select :category, Place::CATEGORY %>
 
   </div>
   <%= f.submit "Post", class: "btn btn-primary" %>
