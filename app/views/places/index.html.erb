@@ -1,12 +1,10 @@
 <% provide(:title, 'All places') %>
 <h1>All places</h1>
 
-<%= will_paginate %>
-
 <ul class="places">
   <% @places.each do |place| %>
-    <%= render @places %>
+    <li>
+      <%= link_to place.name, place %>
+    </li>
   <% end %>
 </ul>
-
-<%= will_paginate %>
