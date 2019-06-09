@@ -8,6 +8,7 @@
 
 User.create!(name: "Example User",
              email: "example@railsproject.org",
+             password: "gooddogs"
              password_confirmation: "gooddogs")
 
 99.times do |n|
