@@ -24,6 +24,7 @@ class PlacesController < ApplicationController
   end
   
   def edit  
+    @place = Place.find(params[:id])
   end
 
   def update  
