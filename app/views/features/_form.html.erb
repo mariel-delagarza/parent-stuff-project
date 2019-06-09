@@ -1,0 +1,17 @@
+<%= form_for(@feature) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="field">
+    <%= f.label "Changing tables?" %> 
+    <%= f.check_box :changing_tables %>
+    <br>
+    <%= f.label "Family bathroom?" %> 
+    <%= f.check_box :family_bathroom %>
+    <br>
+    <%= f.label "High chairs?" %> 
+    <%= f.check_box :high_chairs %>
+    <br>
+    <%= f.label "Nursing room?" %> 
+    <%= f.check_box :nursing_room %>
+  </div>
+  <%= f.submit "Post", class: "btn btn-primary" %>
+<% end %>
