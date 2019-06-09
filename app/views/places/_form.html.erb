@@ -1,0 +1,22 @@
+<%= form_for(@place) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <div class="field">
+    
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control' %>
+
+    <%= f.label :address %>
+    <%= f.text_field :address, class: 'form-control' %>
+
+    <%= f.label :website %>
+    <%= f.text_field :website, class: 'form-control' %>
+
+    <%= f.label :phone_number %>
+    <%= f.text_field :phone_number, class: 'form-control' %>
+
+    <%= f.label :category %>
+    <%= f.select :category, Place::CATEGORY %>
+
+  </div>
+  <%= f.submit "Post", class: "btn btn-primary" %>
+<% end %>
