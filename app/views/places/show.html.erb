@@ -3,7 +3,16 @@
   <%= @place.name %>
 </h1>
 
-  <%= @place.address %>
-  <%= @place.website %>
-  <%= @place.phone_number %>
-  <%= @place.category %>
+<div class="row">
+<ul>
+
+  <li>Address:      <%= @place.address %></li>
+  <br>
+  <li>Website:      <%= @place.website %></li>
+  <br>
+  <li>Phone Number: <%= @place.phone_number %></li>
+  <br>
+  <li>Category:     <%= @place.category %></li>
+
+</ul>
+</div>
