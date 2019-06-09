@@ -15,4 +15,9 @@ class User < ApplicationRecord
     BCrypt::Password.create(string, cost: cost)
   end
   
+  # Defines a proto feed
+  def feed 
+    Review.where("user_id = ?", id)
+  end
+
 end
