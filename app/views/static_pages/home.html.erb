@@ -1,23 +1,7 @@
 <% if logged_in? %>
-  <div class="row">
-    <aside class="col-md-4">
-      <section class="user_info">
-        <%= render 'shared/user_info' %>
-      </section>
-      <section class="review_form">
-        <%= render 'shared/review_form' %>
-      </section>
-    </aside>
-  </div>
+   <%= render 'static_pages/logged_in_home' %>
 <% else %>
-  <div class="center jumbotron">
-    <h1>Parent Stuff</h1>
-  
-    <h2>The stuff parents need, where they need it.</h2>
-
-    <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
-  </div>
-
-  <%= link_to image_tag("flatiron_logo.JPG", alt: "Flatiron School Logo"), 'https://flatironschool.com' %>
-
+  <%= render  'static_pages/logged_out_home'%>
 <% end %>
+
+<!-- call render with the full path (including static_pages) to make sure that rendering the home pages works in all controllers, not just the Static Pages controller -->
