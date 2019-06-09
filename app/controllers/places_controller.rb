@@ -8,6 +8,11 @@ class PlacesController < ApplicationController
     @place = Place.new
   end
 
+  def show
+    @place = Place.find(params[:id])
+    #@reviews = @user.reviews.paginate(page: params[:page])
+  end
+
   def create  
     @place = Place.new(place_params)
     if @place.save
