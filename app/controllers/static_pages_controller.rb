@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
-    @reivew = current_user.reviews.build if logged_in?
+    @review = current_user.reviews.build if logged_in?
   end
 
   def help
