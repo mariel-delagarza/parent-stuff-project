@@ -11,6 +11,39 @@
   <li>Phone Number: <%= @place.phone_number %></li>
   <br>
   <li>Category:     <%= @place.category %></li>
+  <br>
+  <li>Changing Tables? 
+    <%if @place.changing_tables == true %>
+      <span>Yes!</span>
+    <%else%>
+      <span>No</span>
+    <%end%>
+  </li>
+  <br>
+    <li>Family bathroom? 
+      <%if @place.family_bathroom == true %>
+        <span>Yes!</span>
+      <%else%>
+        <span>No</span>
+      <%end%>
+    </li>
+  <br>
+  <li>High chairs? 
+    <%if @place.high_chairs == true %>
+      <span>Yes!</span>
+    <%else%>
+      <span>No</span>
+    <%end%>
+  </li>
+  <br>
+  <li>Nursing room? 
+    <%if @place.nursing_room == true %>
+      <span>Yes!</span>
+    <%else%>
+      <span>No</span>
+    <%end%>
+  </li>
+
 </ul>
 
 <h2>Have some of these details changed?</h2>
