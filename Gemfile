@@ -17,6 +17,8 @@ gem 'turbolinks',              '5.0.1'
 gem 'jbuilder',                '2.7.0'
 gem 'actionview',              '>=5.1.6.2'
 gem 'bootsnap'
+gem 'omniauth'
+gem 'omniauth-google'
 
 group :development, :test do
   gem 'sqlite3', '1.3.13'
