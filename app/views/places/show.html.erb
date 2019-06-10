@@ -43,9 +43,16 @@
       <span>No</span>
     <%end%>
   </li>
-
 </ul>
 
 <h2>Have some of these details changed?</h2>
 <h2><%= link_to "Update them and share with other parents!", edit_place_path%></h2>
 
+<h1>Reviews submitted about <%= @place.name %></h1>
+<ul>
+  <% @place.reviews.each do |review| %>
+    <li><%= review.content %>
+    <br>
+    Submitted by <%= review.user.name%></li>
+  <%end%>
+</ul>
