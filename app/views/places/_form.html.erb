@@ -17,6 +17,27 @@
     <%= f.label :category %>
     <%= f.select :category, Place::CATEGORY %>
 
+    <%= f.label :changing_tables, class: "checkbox inline" do %>
+      <%= f.check_box :changing_tables %>
+      <span>Changing Tables</span>
+    <% end %>
+
+    <%= f.label :family_bathroom, class: "checkbox inline" do %>
+      <%= f.check_box :family_bathroom %>
+      <span>Family Bathroom</span>
+    <% end %>
+
+    <%= f.label :high_chairs, class: "checkbox inline" do %>
+      <%= f.check_box :high_chairs %>
+      <span>High Chairs</span>
+    <% end %>
+
+    <%= f.label :nursing_room, class: "checkbox inline" do %>
+      <%= f.check_box :nursing_room %>
+      <span>Nursing Room</span>
+    <% end %>
+
+
   </div>
   <%= f.submit "Post", class: "btn btn-primary" %>
 <% end %>
