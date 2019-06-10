@@ -37,7 +37,10 @@ class PlacesController < ApplicationController
     end
   end   
 
-  def destroy
+  def destroy 
+    Place.find(params[:id]).destroy
+    flash[:success] = "Place deleted!"
+    redirect_to places_url
   end
 
   private
