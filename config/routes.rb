@@ -11,6 +11,5 @@ Rails.application.routes.draw do
   
   resources :users 
   resources :reviews, only: [:create, :destroy]
-  resources :places #will later nest features resources
-
+  resources :places 
 end
