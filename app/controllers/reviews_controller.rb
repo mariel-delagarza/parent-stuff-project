@@ -2,9 +2,20 @@ class ReviewsController < ApplicationController
   before_action :logged_in_user, only: [:create, :destroy]
   before_action :correct_user, only: :destroy
 
+  def index
+    @reviews = Place.find_by(id:params[:place_id]).reviews
+  end
+
+  
+  def new 
+    @review = Review.new
+    @review.place_id = params[:place_id]
+  end
+
   def create
     @review = current_user.reviews.build(review_params)
     #@place_options = Places.all.map{ |p| [p.name, p.id] }
+    
     if @review.save
       flash[:success] = "Review created!"
       redirect_to root_url
