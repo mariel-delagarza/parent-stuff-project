@@ -2,7 +2,11 @@ class PlacesController < ApplicationController
 
   def index
     @places = Place.all
-    render json: @places
+    respond_to do |format|
+      format.html { render :index }
+      format.json { render json: @places, status: 200 }
+    end 
+    #render json: @places
   end
   
   def new
