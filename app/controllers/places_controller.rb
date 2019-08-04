@@ -16,7 +16,11 @@ class PlacesController < ApplicationController
   def show
     @place = Place.find(params[:id])
     #@reviews = @user.reviews.paginate(page: params[:page])
-    render json: @place 
+    #render json: @place '
+    respond_to do |format|
+      format.html { render :show }
+      format.json { render json: @place, status: 200 }
+    end 
   end
 
   def create  
