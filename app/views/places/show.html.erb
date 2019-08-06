@@ -48,11 +48,6 @@
 <h2>Have some of these details changed?</h2>
 <h2><%= link_to "Update them and share with other parents!", edit_place_path%></h2>
 
-<h1>Reviews submitted about <%= @place.name %></h1>
-<ul>
-  <% @place.reviews.each do |review| %>
-    <li><%= review.content %>
-    <br>
-    Submitted by <%= review.user.name%></li>
-  <%end%>
-</ul>
+<h2>Want to see the reviews for this place?</h2>
+<h2><%= link_to "Click here!", "#", {data: {place_id: @place.id}, id: "review_link"} %></h2>
+

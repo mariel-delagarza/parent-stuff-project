@@ -438,7 +438,7 @@ DEPENDENCIES
   guard (= 2.14.1)
   guard-minitest (= 2.4.6)
   jbuilder (= 2.7.0)
-  jquery-rails (= 4.3.1)
+  jquery-rails
   listen (= 3.1.5)
   mini_magick (= 4.7.0)
   minitest (= 5.10.3)
