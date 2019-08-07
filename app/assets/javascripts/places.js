@@ -14,5 +14,14 @@ function handleReviewLinkClick() {
 
 function getReviews(event) {
   event.preventDefault();
-  alert("test");
+  // alert("test");
+  const placeId = event.target.dataset.placeId; 
+  fetch("/places/"+ placeId + ".json").then(response => response.json()).then(data => displayReviews(data.reviews)) 
+};
+
+function displayReviews(reviews) {
+  for (var i = 0; i < reviews.length; i++) {
+    reviewList = "<li>" + reviews[i].content + "</li>"
+    document.getElementById('target-id').innerHTML += reviewList;
+  };
 };
