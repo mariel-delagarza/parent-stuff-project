@@ -27,10 +27,10 @@ class PlacesController < ApplicationController
     @place = Place.new(place_params)
     if @place.save
       flash[:success] = "Your new place was created!"
-      #respond_to do |format| 
-       # format.html {redirect_to places_path}
-       # format.json {render json: @place}
-      #end 
+      respond_to do |format| 
+        format.html {redirect_to places_path}
+        format.json {render json: @place, status: 200}
+      end 
     else 
       render 'new'
     end
